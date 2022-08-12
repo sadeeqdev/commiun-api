@@ -1,9 +1,11 @@
 import { gsap } from "gsap";
 // import ScrollSmoother from "gsap/ScrollSmoother";
 import ScrollTrigger from "gsap/ScrollTrigger";
+import LocomotiveScroll from 'locomotive-scroll';
 gsap.registerPlugin(ScrollTrigger);
 
-import LocomotiveScroll from 'locomotive-scroll';
+
+if(document.querySelector(".smooth-scroll")){
 
 const locoScroll = new LocomotiveScroll({
     el: document.querySelector(".smooth-scroll"),
@@ -24,13 +26,13 @@ ScrollTrigger.scrollerProxy(".smooth-scroll", {
   pinType: document.querySelector(".smooth-scroll").style.transform ? "transform" : "fixed"
 });
 
-let tl = gsap.timeline({defaults:{ease:"none"}})
+let tl = gsap.timeline({defaults:{}})
 .to(".console-img", {scaleX:1.2, scaleY:1.2,  duration:0.5})
 
-let tl2 = gsap.timeline({defaults:{ease:"none"}})
+let tl2 = gsap.timeline({defaults:{}})
 .to(".console-img-2", {scaleX:1.2, scaleY:-1.2,  duration:0.5})
 
-let tl3 = gsap.timeline({defaults:{ease:"none"}})
+let tl3 = gsap.timeline({defaults:{}})
 .to(".features-bar", {x:-400, duration:0.5})
 
 ScrollTrigger.create({
@@ -39,7 +41,6 @@ ScrollTrigger.create({
     end:"+=300",
     scroller: ".smooth-scroll",
     animation:tl,
-    scrub:true,
     pin:true,
 })
 
@@ -49,7 +50,6 @@ ScrollTrigger.create({
     end:"+=300",
     scroller: ".smooth-scroll",
     animation:tl2,
-    scrub:true,
     pin:true,
 })
 
@@ -70,3 +70,41 @@ ScrollTrigger.addEventListener("refresh", () => locoScroll.update());
 
 // after everything is set up, refresh() ScrollTrigger and update LocomotiveScroll because padding may have been added for pinning, etc.
 ScrollTrigger.refresh();
+
+
+}
+
+
+///////////////////// my demo
+
+if(document.querySelector(".bar-b")){
+    gsap.to(".bar-c", {
+        scrollTrigger: {
+            trigger:".bar-c",
+            toggleActions: "restart none none none"
+        },
+        x:400,
+        rotation:360,
+        duration:3
+    })
+}
+
+
+
+if(document.querySelector(".container")){
+    
+    let sections = gsap.utils.toArray(".panel");
+
+    gsap.to(sections, {
+        xPercent: -100 * (sections.length -1),
+        ease: 'none',
+        scrollTrigger: {
+            trigger:".container",
+            pin:true,
+            scrub: 1,
+            snap: 1 / (sections.length - 1),
+            end:() => "+=" + document.querySelector(".container").offsetWidth
+        }
+    })
+
+}

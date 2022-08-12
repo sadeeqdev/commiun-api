@@ -4,12 +4,37 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="/dist/output.css" rel="stylesheet">
     <script type="module" src="../dist/main.js"></script>
     <title>Gasp demo</title>
 </head>
-<body style="background:#191919; color:#fff">
-    <h1 style="width:5px">H</h1>
-    <h1 style="width:5px">H</h1>
-    <h1 style="width:5px">H</h1>
+<body style="background:#191919; color:#fff" class="overflow-x-hidden horizontal-body">
+    <div class="container w-max flex h-max  text-white text-7xl items-center text-center font-bold">
+        <div class="panel w-screen h-screen flex-shrink-0 bg-orange flex items-center justify-center">
+            <div class="container">
+                Orange
+            </div>
+        </div>
+        <div class="panel w-screen h-screen bg-purple flex-shrink-0  flex items-center justify-center">
+            <div class="container">
+                Purple
+            </div>
+        </div>
+        <div class="panel w-screen h-screen bg-green flex flex-shrink-0  items-center justify-center">
+            <div class="container">
+                Green
+            </div>
+        </div>
+        <div class="panel w-screen h-screen bg-sub-dark flex flex-shrink-0  items-center justify-center">
+            <div class="container">
+                Grey
+            </div>
+        </div>
+    </div>
+    <div class="w-2/4 mx-auto flex-col justify-center text-center">
+        <div class="w-16 h-16 bg-purple p-5 bar-a my-80">A</div>
+        <div class="w-16 h-16 bg-orange p-5 bar-b my-80">B</div>
+        <div class="w-16 h-16 bg-green p-5 bar-c my-80">C</div>
+    </div>
 </body>
 </html>
