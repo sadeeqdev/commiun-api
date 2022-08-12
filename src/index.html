@@ -4,7 +4,10 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link href="/dist/output.css" rel="stylesheet">
+  <link href="/dist/locomotive-scroll.css" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <script type="module" src="../dist/main.js"></script>
+
   <style>
     .cut-out-right {
      clip-path: polygon(88% 0, 100% 22%, 100% 100%, 0 100%, 0 0);
@@ -33,7 +36,7 @@
 
   </style>
 </head>
-<body class="bg-dark">
+<body class="smooth-scroll bg-dark  ">
   <div class="lg:w-4/5 mx-auto w-11/12 sm:w-11/12">
     <!------Welcome bar ------------------------------->
     <div class="welcome-div">
@@ -59,9 +62,9 @@
     </div>
   </div>
     <!------featuress bar ------------------------------------------------------------------------------------->
-  <div class="scrollbar" style="width: 100%; height: 300px; display: block; overflow-x: auto; overflow-y: auto;">
+  <div class="scrollbar smooth-scroll" style="width: 100%; height: 300px; display: block; overflow-x: auto; overflow-y: auto;">
     <!------Component div-->
-    <div class="scrollbar flex space-x-9" style="width: 2500px; margin-left: 30px;">
+    <div class="scrollbar flex space-x-9 smooth-scroll features-bar" style="width: 2500px; margin-left: 30px;">
       <div class="w-80" >
         <div class="-mb-10">
           <img src="assets/anime-bg-1.png" class="w-12 h-20 mx-auto  text-center flex justify-center" alt="blck-logo">
@@ -156,7 +159,7 @@
   </div>
   <div class="lg:w-4/5 mx-auto xs:w-11/12 w-11/12">
     <!------built by bar ------------------------------->
-    <div class="mt-32 flex flex-col-reverse lg:grid space-y-8 lg:space-y-0 lg:grid-cols-2 xs:grid-cols-1">
+    <div class="mt-32 flex flex-col-reverse lg:grid space-y-8 lg:space-y-0 lg:grid-cols-2 xs:grid-cols-1 console-div">
       <div class="">
         <h2 class="text-white font-bold text-5xl 2xl:text-7x mt-9 lg:mt-0">
           Built by developers for developers.
@@ -183,13 +186,13 @@
           </div>
       </div>
       <div class="">
-        <img src="assets/console-img-1.png" width="89%" alt="">
+        <img src="assets/console-img-1.png"  class="console-img" width="89%" alt="">
       </div>
     </div>
      <!------built by bar ------------------------------->
-    <div class="mt-32  lg:grid lg:grid-cols-2 ">
+    <div class="mt-32  lg:grid lg:grid-cols-2 console-div-2">
       <div class="">
-        <img src="assets/console-img-2.png" style="-webkit-transform: scaleX(-1); transform: scaleX(-1);" width="50%" alt="">
+        <img src="assets/console-img-2.png" class="console-img-2" style="-webkit-transform: scaleX(-1); transform: scaleX(-1);" width="50%" alt="">
       </div>
       <div class="">
         <h2 class="text-white font-bold text-5xl 2xl:text-7xl mt-12 lg:mt-0">
