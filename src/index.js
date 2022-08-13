@@ -162,16 +162,17 @@ if(document.querySelector(".container")){
     })
 
         let tl2 = gsap.timeline({defaults:{}})
-    .from(".bar-c", {scale:0.2, autoAlpha:0,  duration:0.5})
+    .from(".bar-c", {scale:0.8, autoAlpha:0, duration:0.5})
 
 
     ScrollTrigger.create({
         trigger:".bar-c",
-        start:"0 0%",
-        pin: true,
+        start:"0% 80%",
+        pin:true,
         pinSpacing:false,
         scrub: true,
-        snap: 0.5,
+        snap:1,
+        end: "+=200" ,
         scroller: ".smooth-scroll-2",
         animation:tl2,
     })
