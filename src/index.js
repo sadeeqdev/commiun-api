@@ -33,6 +33,11 @@ if(document.querySelector(".smooth-scroll")){
     let tl3 = gsap.timeline({defaults:{}})
     .to(".features-bar", {x:-400, duration:0.5})
 
+    let tl4 = gsap.timeline({defaults:{}})
+    .to('.rotator', {rotation:360, repeat:5, ease:'none', duration:3})
+
+    // gsap.to('.rotator', {rotation:360, repeat:-1, ease:'none', duration:3})
+
     ScrollTrigger.create({
         trigger:".console-div",
         start:"50% 50%",
@@ -57,6 +62,14 @@ if(document.querySelector(".smooth-scroll")){
         end:"+=300",
         scroller: ".smooth-scroll",
         animation:tl3,
+        scrub:true,
+    })
+
+     ScrollTrigger.create({
+        trigger:".rotator",
+        start:"50% 80%",
+        scroller: ".smooth-scroll",
+        animation:tl4,
         scrub:true,
     })
 
