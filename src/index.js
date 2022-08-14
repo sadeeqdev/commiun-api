@@ -152,12 +152,10 @@ if(document.querySelector(".container")){
     ScrollTrigger.create({
         trigger:".container",
         animation:tl,
-        start:"0 0%",
         scroller: ".smooth-scroll-2",
         pin:true,
-        pinSpacing:false,
-        scrub: 1,
-        snap: 1 / (sections.length - 1),
+        scrub: true,
+        // snap: 1 / (sections.length - 1),
         end:() => "+=" + document.querySelector(".container").offsetWidth,
     })
 
