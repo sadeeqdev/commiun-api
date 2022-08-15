@@ -9,6 +9,9 @@
   <script type="module" src="../dist/main.js"></script>
 
   <style>
+    *{
+      overflow: hidden;
+    }
     .cut-out-right {
      clip-path: polygon(88% 0, 100% 22%, 100% 100%, 0 100%, 0 0);
     }
@@ -42,6 +45,21 @@
         width:30%
     }
 
+    .console-img, .console-img-2{
+      scale: 0.5;
+    }
+    .page-loader{
+      width: 100%;
+      height: 100%;
+      position: absolute;
+      top:0;
+      left:0;
+      right:0;
+      z-index: 9;
+      bottom: 0;
+      transition: 2s;
+    }
+
     @media only screen and (max-width: 1600px) {
       .second-circle{
           position: absolute;  
@@ -54,7 +72,11 @@
 
   </style>
 </head>
-<body class="smooth-scroll bg-dark  ">
+<body class="bg-dark">
+  <div class="page-loader bg-sub-dark flex justify-center items-center">
+      <img src="assets/circle-img-13.png" style="z-index:11" class="loading-rotor" width="20%">
+  </div>
+  <div class="smooth-scroll">
   <div class="lg:w-4/5 mx-auto w-11/12 sm:w-11/12">
     <!------Welcome bar ------------------------------->
     <div class="welcome-div">
@@ -489,5 +511,6 @@
       </div>
     </div>
   </div>
+</div>
 </body>
 </html>

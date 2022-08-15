@@ -25,10 +25,10 @@ if(document.querySelector(".smooth-scroll")){
     });
 
     let tl = gsap.timeline({defaults:{}})
-    .to(".console-img", {scaleX:1.2, scaleY:1.2,  duration:0.5})
+    .from(".console-img", {scaleX:0.8, scaleY:0.8,  duration:0.5})
 
     let tl2 = gsap.timeline({defaults:{}})
-    .to(".console-img-2", {scaleX:1.2, scaleY:-1.2,  duration:0.5})
+    .from(".console-img-2", {scaleX:0.8, scaleY:-0.8,  duration:0.5})
 
     let tl3 = gsap.timeline({defaults:{}})
     .to(".features-bar", {x:-400, duration:0.5})
@@ -37,6 +37,22 @@ if(document.querySelector(".smooth-scroll")){
     .to('.rotator', {rotation:360, repeat:5, ease:'none', duration:3})
 
     gsap.to('.rotator', {rotation:1440, repeat:-1, ease:'none', duration:60})
+
+    gsap.to('.loading-rotor', {rotation:2880, repeat:-1, ease:'none', duration:2})
+
+
+    const loadRotor = document.querySelector('.page-loader')
+
+
+    setTimeout(() => {
+        gsap.to(".page-loader", {opacity: 0, display:"none", duration:2})
+    },4000)
+
+
+    setTimeout(() => {
+        gsap.to(".loading-rotor", {opacity: 0, display:"none", duration:1})
+    },3000)
+
 
     ScrollTrigger.create({
         trigger:".console-div",
