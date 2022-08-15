@@ -1,6 +1,13 @@
 import { gsap } from "gsap";
 import ScrollTrigger from "gsap/ScrollTrigger";
 import LocomotiveScroll from 'locomotive-scroll';
+
+
+if (process.env.NODE_ENV !== 'production') {
+console.log('Looks like we are in development mode!');
+}
+
+
 gsap.registerPlugin(ScrollTrigger);
 
 
