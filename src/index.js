@@ -21,7 +21,7 @@ if(document.querySelector(".smooth-scroll")){
         touchMultiplier: 2,
         smoothMobile: 0,
         smartphone: {
-            smooth: false,
+            smooth: !0,
             breakpoint: 767
         },
         tablet: {
