@@ -14,20 +14,31 @@ gsap.registerPlugin(ScrollTrigger);
 if(document.querySelector(".smooth-scroll")){
     const locoScroll = new LocomotiveScroll({
         el: document.querySelector(".smooth-scroll"),
-        inertia: 0.8,
         smooth: true,
-        getDirection: true,
-        mobile: {
-        breakpoint: 0,
-        smooth: false,
-        getDirection: true,
-        },
-        tablet: {
-        breakpoint: 0,
-        smooth: false,
-        getDirection: true,
-        },
+    lerp: 0.03, // Linear Interpolation, 0 > 1 // Try 0.01
+    multiplier: 1.4, // Effect Multiplier
+    reloadOnContextChange: true,
+    touchMultiplier: 2,
+    smoothMobile: 0,
+    smartphone: {
+        smooth: !0,
+        breakpoint: 767
+    },
+    tablet: {
+        smooth: !1,
+        breakpoint: 1024
+    },
     });
+
+    setTimeout(() => {  
+        locoScroll.destroy();
+    }, 0);
+    setTimeout(() => {  
+        locoScroll.init();
+    }, 50);
+    setTimeout(() => {  
+        locoScroll.update();
+    }, 1000);
 
     locoScroll.on("scroll", ScrollTrigger.update);
 
