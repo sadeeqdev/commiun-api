@@ -3,6 +3,8 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Commuin API</title>
+  <link rel="icon" href="src/assets/circle-img-13.png" />
   <link href="/dist/output.css" rel="stylesheet">
   <link href="/src/style/locomotive-scroll.css" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
@@ -45,9 +47,6 @@
         width:30%
     }
 
-    .console-img, .console-img-2{
-      scale: 0.5;
-    }
     .page-loader{
       width: 100%;
       height: 100%;
@@ -59,6 +58,17 @@
       bottom: 0;
       transition: 2s;
     }
+
+    .floater{
+      float: right;
+    }
+
+     @media only screen and (max-width: 800px) {
+        .floater{
+        float: none;
+      }
+    }
+
 
     @media only screen and (max-width: 1600px) {
       .second-circle{
@@ -94,19 +104,19 @@
       <!-----------Welcome div --------------------------------------------->
       <div class="lg:mt-0 mt-20  text-center uppercase text-sub-white font-medium">Introducing ONIX</div>
 
-      <div class="flex justify-between" >
-        <div class="">
-          <div class="lg:text-7xl mt-32 font-bold text-white text-left text-4xl 2xl:w-3/4 xl:w-1/1 " >Community-owned API of blockchains</div>
-          <div class="lg:mt-9 lg:w-3/4 text-xl text-white text-left mt-20 w-5/6 ">Onix delivers tamper-proof inputs, outputs, and computations to support advanced smart contracts on any blockchain</div>
+      <div class="grid justify-between grid-cols-1 lg:flex lg:items-center" >
+        <div class="lg:mt-20 mt-0">
+          <div class="lg:text-7xl mt-16 font-bold text-white text-center lg:text-left lg:mt-16 text-4xl 2xl:w-3/4 xl:w-1/1 " >Community-owned API of blockchains</div>
+          <div class="lg:mt-9 lg:w-3/4 text-xl text-white text-center lg:text-left mt-10 w-1/1 ">Onix delivers tamper-proof inputs, outputs, and computations to support advanced smart contracts on any blockchain</div>
         </div>
-        <div class="">
-          <img src="/src/assets/circle-img-16.png"  class="rotator flex justify-end mt-20" width="80%" style="float:right">
+        <div class="flex justify-center">
+          <img src="/src/assets/circle-img-16.png"  class="rotator floater mt-20" width="80%">
         </div>
       </div>
     </div>
     <div class="my-32 max-w mx-auto sm">
-      <h2 class="text-white lg:font-bold lg:text-5xl w-2/4 lg:w-3/4 xl:w-3/4 2xl:w-3/5 mx-auto text-center w-11/12 font-medium text-3xl">Onix make blockchain development accesible to everyone</h2>
-    </div>s
+      <h2 class="text-white lg:font-bold lg:text-5xl lg:w-3/4 xl:w-3/4 2xl:w-3/5 mx-auto text-center w-1/1 font-bold text-4xl">Onix make blockchain development accesible to everyone</h2>
+    </div>
   </div>
     <!------featuress bar ------------------------------------------------------------------------------------->
   <div class="scrollbar smooth-scroll" style="width: 100%; height: 300px; display: block; overflow-x: auto; overflow-y: auto;">
