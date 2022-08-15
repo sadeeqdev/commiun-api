@@ -16,14 +16,14 @@
       clip-path: polygon(27% 0, 100% 0, 100% 100%, 0 100%, 0 30%);
     }
 
-    /* .welcome-div{
-      background-image: url('assets/console-img-2.png');
+    .join-div{
+      background-image: url('assets/circle-3d-2.png');
       background-blend-mode: darken;
-      background-size: 45%;
+      background-size: 55%;
       background-repeat: no-repeat;
       background-position: center;
       height: 800px;
-    } */
+    }
 
     .scrollbar {
         -ms-overflow-style: none;  /* Internet Explorer 10+ */
@@ -32,6 +32,24 @@
     }
     .scrollbar::-webkit-scrollbar { 
         display: none;  /* Safari and Chrome */
+    }
+
+    .second-circle{
+        position: absolute;  
+        right: 0; 
+        left: 0; 
+        margin: auto; 
+        width:30%
+    }
+
+    @media only screen and (max-width: 1600px) {
+      .second-circle{
+          position: absolute;  
+          right: 0; 
+          left: 0; 
+          margin: auto; 
+          width:40%
+      }
     }
 
   </style>
@@ -64,7 +82,7 @@
         </div>
       </div>
     </div>
-    <div class="my-10 max-w mx-auto sm">
+    <div class="my-32 max-w mx-auto sm">
       <h2 class="text-white lg:font-bold lg:text-5xl w-2/4 lg:w-3/4 xl:w-3/4 2xl:w-3/5 mx-auto text-center w-11/12 font-medium text-3xl">Onix make blockchain development accesible to everyone</h2>
     </div>s
   </div>
@@ -434,11 +452,16 @@
       </div>
     </div>
   </div>
-  <div class="mt-32 h-80 w-4/5 mx-auto text-center py-32 mb-80">
-    <div class="text-white text-6xl font-bold">Want to get involved?</div>
-    <p class="text-sub-white text-lg mt-7">Or learn all about <span class="text-purple">how to build on Onix.</span></p>
-    <div class="cut-out-right text-white w-52 mt-32 mx-auto px-0.5 py-0.5 font-bold text-sm bg-purple">
-      <div class="cut-out-right px-4 py-3 bg-purple-bg">JOIN THE COMMUNITY</div>
+  <div class="mt-32 h-80 w-3/5 mx-80 grid-cols-1 place-items-center text-center py-15 mb-80">
+      <img src="assets/circle-3d-2.png"  width:="" class="rotator second-circle w-2/6 lg:w-2/6">
+    <div style="position: absolute; right: 0; left: 0; margin: auto;">
+    <div class="flex-col justify-center">
+      <div class="text-white text-6xl font-bold">Want to get involved?</div>
+        <p class="text-sub-white text-lg mt-7">Or learn all about <span class="text-purple">how to build on Onix.</span></p>
+        <div class="cut-out-right text-white w-52 mt-32 mx-auto px-0.5 py-0.5 font-bold text-sm bg-purple">
+          <div class="cut-out-right px-4 py-3 bg-purple-bg">JOIN THE COMMUNITY</div>
+        </div>
+      </div>
     </div>
   </div>
   <div class="mt-32 bg-darker max-w py-8 text-white">
